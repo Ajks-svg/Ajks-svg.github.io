@@ -1,0 +1,100 @@
+
+
+
+    <!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>高度自适应的九宫格效果</title>
+<style>
+html, body { height: 100%; margin: 0; }
+.page {
+    position: absolute;
+	left: 0; top: 0; right: 0; bottom: 0;
+}
+.list {
+	float: left;
+	height: 33.3%; width: 33.3%;
+	position: relative;
+}
+.list:before {
+	content: '';
+	position: absolute;
+	left: 10px; right: 10px; top: 10px; bottom: 10px;
+	border-radius: 10px;
+	background-color: #cad5eb;
+}
+.list:after {
+	content:attr(data-index);
+	position: absolute;
+	height: 30px;
+	left: 0; right: 0; top: 0; bottom: 0;
+	margin: auto;
+	text-align: center;
+	font: 24px/30px bold 'microsoft yahei';
+}
+</style>
+</head>
+
+<body>
+<div class="page">
+	<div class="list" data-index="1"></div>
+    <div class="list" data-index="2"></div>
+    <div class="list" data-index="3"></div>
+    <div class="list" data-index="4"></div>
+    <div class="list" data-index="5"></div>
+    <div class="list" data-index="6"></div>
+    <div class="list" data-index="7"></div>
+    <div class="list" data-index="8"></div>
+    <div class="list" data-index="9"></div>
+</div>
+</style>
+
+  <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, minimal-ui" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta name="format-detection"content="telephone=no, email=no" />
+    <!-- UC应用模式 -->
+    <meta name="browsermode" content="application">
+    <!-- QQ应用模式 -->
+    <meta name="x5-page-mode" content="app">
+    <title>Document</title>
+    <style type="text/css">
+      *{ -webkit-box-sizing:border-box;
+         -moz-box-sizing:border-box;
+         box-sizing:border-box;   
+      }
+        
+       .head,.footer,.wrap-page{ position: absolute; left: 0; right: 0;} 
+       .head,.footer{ height: 44px; background-color: #fff; text-align: center; z-index: 900; line-height: 44px;}
+       .head{ top: 0; border-bottom: 1px solid #333;}
+       .footer{ bottom: 0; border-top: 1px solid #333;}
+       .wrap-page{ top: 44px; bottom: 44px; overflow-y:auto; -webkit-overflow-scrolling:touch;}
+       .page{ padding: 10px;}
+       .page p{ margin-bottom: 10px;}
+    </style>
+</head>
+<body>
+    <header class="head">哈哈哈。我是header</header>
+    <div class="wrap-page">
+         <section class="page">
+        <p>因为fixed定位，滚动的时候bug太多，特别是有表单元素的时候得慎用；而flex布局兼容方面有一定问题，好像性能也不是很好，况且如果是在body下面直接布局的话，只有上中下这几个元素还好，如果再添加上弹窗，panel什么的子元素搞不好还有问题得深入；所以选择绝对定位相对来说还是比较靠谱的。而优化的元素位置关系，因为国产的安卓手机太多，有些还不太支持，再加上隐藏的元素选择器还有效，所以暂时不考虑。</p>
+        <p>最后我们一般采用常规结构的绝对定位来布局。</p>
+        <p>因为fixed定位，滚动的时候bug太多，特别是有表单元素的时候得慎用；而flex布局兼容方面有一定问题，好像性能也不是很好，况且如果是在body下面直接布局的话，只有上中下这几个元素还好，如果再添加上弹窗，panel什么的子元素搞不好还有问题得深入；所以选择绝对定位相对来说还是比较靠谱的。而优化的元素位置关系，因为国产的安卓手机太多，有些还不太支持，再加上隐藏的元素选择器还有效，所以暂时不考虑。</p>
+        <p>最后我们一般采用常规结构的绝对定位来布局。</p>
+        <p>因为fixed定位，滚动的时候bug太多，特别是有表单元素的时候得慎用；而flex布局兼容方面有一定问题，好像性能也不是很好，况且如果是在body下面直接布局的话，只有上中下这几个元素还好，如果再添加上弹窗，panel什么的子元素搞不好还有问题得深入；所以选择绝对定位相对来说还是比较靠谱的。而优化的元素位置关系，因为国产的安卓手机太多，有些还不太支持，再加上隐藏的元素选择器还有效，所以暂时不考虑。</p>
+        <p>最后我们一般采用常规结构的绝对定位来布局。</p>
+        <p>因为fixed定位，滚动的时候bug太多，特别是有表单元素的时候得慎用；而flex布局兼容方面有一定问题，好像性能也不是很好，况且如果是在body下面直接布局的话，只有上中下这几个元素还好，如果再添加上弹窗，panel什么的子元素搞不好还有问题得深入；所以选择绝对定位相对来说还是比较靠谱的。而优化的元素位置关系，因为国产的安卓手机太多，有些还不太支持，再加上隐藏的元素选择器还有效，所以暂时不考虑。</p>
+        <p>最后我们一般采用常规结构的绝对定位来布局。</p>
+        <p>因为fixed定位，滚动的时候bug太多，特别是有表单元素的时候得慎用；而flex布局兼容方面有一定问题，好像性能也不是很好，况且如果是在body下面直接布局的话，只有上中下这几个元素还好，如果再添加上弹窗，panel什么的子元素搞不好还有问题得深入；所以选择绝对定位相对来说还是比较靠谱的。而优化的元素位置关系，因为国产的安卓手机太多，有些还不太支持，再加上隐藏的元素选择器还有效，所以暂时不考虑。</p>
+        <p>最后我们一般采用常规结构的绝对定位来布局。</p>
+      </section>
+          
+    </div> 
+    <footer class="footer">我是foot</footer>
+
+
+
+</body>
+</html>
